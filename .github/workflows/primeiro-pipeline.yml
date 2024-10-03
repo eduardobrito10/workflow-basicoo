@@ -16,6 +16,7 @@ jobs:
     
     # este é o nome do fluxo de trabalho
       name: Job 1
+      needs: Terceiro-fluxo
       # para ser executado nesta máquina virtual (container linux)
       runs-on: ubuntu-latest 
       # agora irei incluir os passsos do script
@@ -27,10 +28,10 @@ jobs:
         - name: Passo3
           run:  echo "Executando o terceiro passo"
 
-          Segundo-fluxo:
+  Segundo-fluxo:
     
     # este é o nome do fluxo de trabalho
-      name: Job 2
+      name: Job2
       # para ser executado nesta máquina virtual (container linux)
       runs-on: ubuntu-latest 
       # agora irei incluir os passsos do script
@@ -42,7 +43,7 @@ jobs:
         - name: Passo 5
           run:  echo "Executando o quinto passo"
 
-          Terceiro-fluxo:
+  Terceiro-fluxo:
     
     # este é o nome do fluxo de trabalho
       name: Job 3
